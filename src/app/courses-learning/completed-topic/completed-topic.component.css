@@ -1,0 +1,48 @@
+.container {
+    width: 338px;
+    height: 41px;
+    align-items: center;
+    justify-content: center;
+}
+
+.first-part {
+    display: inline-block;
+    position: absolute;
+}
+
+.first-part img,p {
+    display: inline;
+    font-size: 14px;
+}
+
+.title {
+    display: inline-block;
+    width: 125px;
+    margin-left: 100px;
+    position: absolute;
+}
+
+.dd {
+    display: inline-block;
+    margin-left: 220px;
+}
+
+.dd p {
+    display: inline;
+    position: absolute;
+}
+
+.time {
+    color: #2E8956;
+    font-size: 10px;
+}
+
+img {
+    margin-right: 5px;
+}
+
+#more {
+    display: inline;
+    margin-top: 5px;
+    margin-left: 100px;
+}

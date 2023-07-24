@@ -1,0 +1,23 @@
+<div class="expand">
+    <div [class]="tab.selected ? 'course' : 'red'">
+        <div [class]="tab.selected ? 'course-icon' : 'red-icon'">
+            <img class="icon" src={{tab.iconsrc}} alt="home-icon">
+        </div>
+        <h1>{{tab.title}}</h1>
+        <div *ngIf="!(tab.subs === undefined || tab.subs.length == 0)">
+            <div *ngIf="tab.selected">
+                <img id="arrow" (click)="unselect()" src="/assets/collapse.svg" alt="collapse-arrow">
+            </div>
+            <div *ngIf="!tab.selected">
+                <img id="more" (click)="select()" src="/assets/more.svg" alt="more">
+            </div>
+        </div>
+    </div>
+    <div
+    *ngIf="tab.selected">
+        <app-sub-tab
+        *ngFor="let sub of tab.subs"
+        [sub]="sub" [tab]="tab"></app-sub-tab>
+    </div>
+</div>
+

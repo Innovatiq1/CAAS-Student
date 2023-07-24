@@ -1,0 +1,24 @@
+<div [class]="section.number==3 ? 'current' : 'container'">
+    <div class="content">
+        <p style="color: rgba(126, 126, 126, 1);">Section {{section.number}}: </p>
+        <div class="title" style="display: inline-flex; flex-direction: column; width: 110px;">
+            <p>{{section.title}}</p>
+        </div>
+        <div class="top-right" style="float: right;">
+            <p style="color: rgba(214, 78, 73, 1); font-size: 10px;">{{section.lectures}} Lectures &centerdot; {{section.time}} Min</p>
+            <img id="collapse" src="/assets/collapse.svg" alt="collapse-arrow">
+        </div>
+        <hr>
+        <div class="items" *ngFor="let item of section.items">
+            <img id="item-icon" [src]="item.type=='video' ? '/assets/vid-icon.svg' : '/assets/reading-icon.svg' " alt="item-icon">
+            <p>{{item.title}}</p>
+            <div class="video" *ngIf="item.type=='video'">
+                <p>Preview</p>
+                <div class="icon">
+                    <img src="/assets/download-vid.svg" alt="preview">
+                </div>
+            </div>
+            <p id="item-time">{{item.time}} Min</p>
+        </div>
+    </div>
+</div>

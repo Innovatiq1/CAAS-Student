@@ -1,0 +1,458 @@
+.container {
+    font-family: 'Nunito';
+    margin-left: 100px;
+    margin-top: 200px;
+}
+
+#close {
+    float: right;
+}
+
+.progress .content {
+    margin: 10px;
+}
+
+.progress .content h2 {
+    display: inline;
+    font-size: 12.4px;
+}
+
+.progress .content .words {
+    position: relative;
+    top: 20px;
+    left: 10px;
+}
+
+.progress .content .words p {
+    color: #767474;
+    font-size: 10px;
+    padding-right: 250px;
+    float: left;
+}
+
+.progress .content .words .cup-border img {
+    position: relative;
+    left: 1.8px;
+    top: 0.7px;
+}
+
+.progress .content .words .cup-border {
+    float: right;
+    width: 19px;
+    height: 19px;
+    flex-shrink: 0;
+    border-radius: 19px;
+    border: 0.3px solid #878787;
+    position: relative;
+    top: -30px;
+    left: -20px;
+}
+
+.progress-bar {
+    display: inline-block;
+    width: 60px;
+    height: 3px;
+    background-color: rgba(46, 137, 86, 1);
+    border-radius: 1px;
+    margin-right: 5px;
+    position: relative;
+}
+
+.progress .content .words .title {
+    width: 350px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.progress .content .words .title p {
+    float: right;
+    color: #D64E49;
+    text-decoration: underline;
+    position: relative;
+    top: -20px;
+    left: 230px;
+    width: 100px;
+}
+
+.progress .content .words h2 {
+    font-size: 16px;
+    position: relative;
+    top: 10px;
+}
+
+.bookmark {
+    width: 855px;
+    height: 29px;
+    flex-shrink: 0;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.bookmark p {
+    display: inline;
+    margin: 3px;
+    font-size: 21px;
+}
+
+.top {
+    margin-top: 40px;
+    margin-left: 20px;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+.top h1 {
+    font-size: 30px;
+}
+
+.top p {
+    font-size: 16px;
+}
+
+.top-right {
+    display: block;
+    position: relative;
+    top: -85px;
+    left: 680px;
+    width: max-content;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.top-right p {
+    font-size: 20px;
+    display: inline;
+    position: relative;
+    top: -20px;
+}
+
+.top-right img {
+    height: 50px;
+    margin-left: 10px;
+}
+
+.video {
+    margin-left: 20px;
+    position: relative;
+    top: -60px;
+}
+
+.progress {
+    left: 1070px;
+    top: 120px;
+    position: absolute;
+    border-radius: 0px 0px 31px 31px;
+    border: 0.5px solid #7E7E7E;
+    background: #FFF;
+    width: 368px;
+    height: fit-content;
+    padding-bottom: 50px;
+    flex-shrink: 0;
+}
+
+.incomplete {
+    margin-top: 30px;
+}
+
+.course-nav {
+    color: rgba(126, 126, 126, 1);
+    position: relative;
+    top: -40px;
+}
+
+.course-nav li {
+    display: inline-block;
+    margin-right: 30px;
+    font-size: 21px;
+}
+
+.course-nav li:hover {
+    color: #2E8956;;
+    text-decoration: underline;
+}
+
+.reminder {
+    width: 853px;
+    height: 167px;
+    border-radius: 15px;
+    border: 0.4px solid #757575;
+    background: #FFF;
+    margin: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+.reminder img {
+    display: inline;
+    padding: 10px;
+    position: relative;
+    top: 30px;
+}
+
+.reminder h1 {
+    display: inline-block;
+    font-size: 20px;
+    position: relative;
+    top: -35px;
+}
+
+.reminder p {
+    display: flex;
+    width: 677px;
+    flex-direction: column;
+    font-size: 14px;
+    position: relative;
+    left: 90px;
+    top: -50px;
+}
+
+.reminder button {
+    display: flex;
+    width: 98px;
+    height: 29px;
+    padding: 0px 14px;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 12px;
+    font-family: 'Nunito';
+    margin-right: 20px;
+    position: relative;
+    top: -40px;
+    left: 90px;
+}
+
+#get-started {
+    background: #526D82;
+    border: none;
+    color: #FFF;
+}
+
+#dismiss {
+    border: 1px solid #526D82;
+    background: #FFF;
+    color: #526D82;
+}
+
+.about {
+    margin-top: 30px;
+    height: 100px;
+}
+
+.about h1 {
+    font-size: 23px;
+}
+
+.about p {
+    font-size: 16px;
+    position: relative;
+    left: 0px;
+
+}
+
+.stats {
+    width: 797px;
+    height: 109px;
+}
+
+.stats p {
+    display: inline;
+    position: relative;
+    top: 0px;
+}
+
+#label {
+    display: inline-block;
+    width: 100px;
+    margin-left: 20px;
+}
+
+.stats .table {
+    display: inline-grid;
+    grid-template-columns: 300px 300px;
+    margin-left: 20px;
+    position: relative;
+    top: -20px;
+}
+
+.stats .cell {
+    display: block;
+}
+
+.certificates {
+    width: 797px;
+    height: 90px;
+}
+
+.certificates div {
+    margin-left: 20px;
+    display: inline;
+}
+
+.certificates p {
+    display: inline;
+    position: relative;
+    top: 0px;
+}
+
+.certificates button {
+    display: block;
+    display: flex;
+    width: 350px;
+    height: 27px;
+    padding: 8px 21px;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: 1px solid #526D82;
+    background: #FFF;
+    color: #526D82;
+    position: relative;
+    left: 150px;
+}
+
+.features {
+    height: 50px;
+}
+
+.features div{
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.description {
+    height: 950px;
+}
+
+.desc-text {
+    position: relative;
+    top: -50px;
+    margin-left: 140px;
+}
+
+.tldr {
+    width: 797px;
+    height: 130px;
+    border-radius: 15px;
+    border: 0.4px solid #757575;
+    background: #FFF;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -20px;
+    left: 30px;
+    line-height: 60px;
+}
+
+.tldr li {
+    display: block;
+    margin-top: 10px;
+}
+
+.tldr img {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.tldr h2 {
+    margin: 10px 30px;
+    font-size: 20px;
+    font-weight: thin;
+}
+
+.tldr ul {
+    line-height: 10px;
+    position: relative;
+    top: -20px;
+    left: -20px;
+}
+
+.target {
+    height: 60px;
+
+}
+
+.target .text {
+    display: inline-block;
+     margin-left: 150px;
+     position: relative;
+     top: -70px;
+}
+
+.instructor {
+    height: 200px;
+}
+
+.instructor-content {
+    position: relative;
+    top: -50px;
+    left: 80px;
+}
+
+.idesc {
+    display: block;
+    position: relative;
+    left: 70px;
+    width: 700px;
+}
+
+.contact-card {
+    width: 400px;
+    display: block;
+    margin-left: 70px;
+}
+
+#instructor-pfp {
+    display: inline-block;
+}
+
+.contact-info {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.bottom {
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.course-content {
+    width: 900px;
+    margin-left: 20px;
+}
+
+.bottom h1{
+    color: #025B9F;
+    font-size: 20px;
+    text-decoration: underline;
+    text-align: center;
+    padding: 20px;
+}
+
+.bottom img {
+    position: relative;
+    margin: 5px;
+}
+
+.footer {
+    width: 100%;
+    border-top: 1px black solid;
+}
+
+br {
+    display: block;
+    content: "";
+    margin: 20px 0;
+}
+
+/* * {
+    background: #000 !important;
+    color: #0f0 !important;
+    outline: solid #f00 1px !important;
+}  */

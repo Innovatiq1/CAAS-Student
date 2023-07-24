@@ -1,0 +1,211 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+<div class="container">
+    <div class="progress">
+        <div class="content">
+            <img id="close" src="/assets/Close.png" alt="close">
+            <div class="words">
+                <h2>Master Class: </h2>
+                <h2 style="color: rgba(214, 78, 73, 1);">Aviation Security and Safety Management</h2>
+                <p>2/15 COMPLETED</p>
+                <div class="cup-border">
+                    <img src="/assets/cup.png" alt="cup">
+                </div>
+                <div class="lines">
+                    <div class="progress-bar"></div>
+                    <div class="progress-bar"></div>
+                    <div style="opacity: 50%;" class="progress-bar"></div>
+                    <div style="opacity: 50%;" class="progress-bar"></div>
+                    <div style="opacity: 50%;" class="progress-bar"></div>
+                </div>
+                <div class="title">
+                    <h2>Course Content</h2>
+                    <p>Expand All Sections</p>
+                </div>
+                <div class="topics">
+                    <app-completed-topic 
+                    *ngFor="let section of sections" 
+                    [section]="section"></app-completed-topic>
+                </div>
+            </div>
+        </div>
+        <div class="incomplete">
+            <app-incomplete-topic
+            *ngFor="let section of incompletesections"
+            [section]="section"></app-incomplete-topic>
+        </div>
+    </div>
+    <div class="bookmark">
+        <p style="color: #7E7E7E;">Courses</p><p>/</p><p style="color: #7E7E7E;">In Progress</p><p>/</p><p>Master Class:</p><p style="color: rgba(214, 78, 73, 1);"> Aviation Security and Safety Management</p>
+    </div>
+    <div class="top">
+        <h1>Aviation Security and Safety Management</h1>
+        <p>Safety and Security: Air Transport Safety</p>
+    </div>
+    <div class="top-right">
+        <p>SECTION 3/12</p>
+        <img src="/assets/lr-button.png" alt="button">
+    </div>
+    <div class="video">
+        <img src="/assets/video.png" alt="video">
+    </div>
+    <div class="course-nav">
+        <ul>
+            <li style="color:#2E8956; text-decoration: underline;">Overview</li>
+            <li>Q&A</li>
+            <li>Notes</li>
+            <li>Announcements</li>
+            <li>Review</li>
+            <li>Learning Tools</li>
+            <li>Quiz(3)</li>
+        </ul>
+    </div>
+    <div class="reminder">
+        <img src="/assets/clock.svg" alt="clock">
+        <h1>Schedule learning time</h1>
+        <p>Learning a little each day adds up. Research shows that students who make 
+            learning a habit are more likely to reach their goals. 
+            Set time aside to learn & get reminders using your learning scheduler.</p>
+        <button id="get-started">Get Started</button>
+        <button id="dismiss">Dismiss</button>
+    </div>
+    <div class="course-content">
+        <div class="about">
+            <h1>About This Course</h1>
+            <p>Security Groups/Access Controls/protection layers/measures.Grooming/Effective Communication/
+                Interview Skills Content</p>
+        </div>
+        <hr>
+        <div class="stats">
+            <p id="label">By the numbers</p>
+            <div class="table">
+                <div class="cell">
+                    <p>Skill Level: Intermediate</p>
+                </div>
+                <div class="cell">
+                    <p>Lectures: 120</p>
+                </div>
+                <div class="cell">
+                    <p>Students: 50</p>
+                </div>
+                <div class="cell">
+                    <p>Videos: 90 total minutes</p>
+                </div>
+                <div class="cell" style="width: 250px">
+                    <p>Language: English, Malay, Tamil, Singaporean Mandarin</p>
+                </div>
+                <div class="cell">
+                    <p>Captions: Yes</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="fade" [ngStyle]="{'opacity': collapsed ? '70%' : '100%'}">
+            <div class="certificates">
+                <p id="label">Certificates</p>
+                <div>
+                    <p>Get CAAS certificate by completing entire course</p>
+                    <button>CAAS Certificate</button>
+                </div>
+            </div>
+            <hr>
+            <div class="features">
+                <p id="label">Features</p>
+                <div>
+                    <p>Available on iOS and Android other devices with exercises</p>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div class="collapsible" *ngIf="!collapsed">
+            <div class="description">
+                <p id="label">Description</p>
+                <div class="desc-text">
+                    <p>Welcome to the Complete Aviation Security and Safety Management (AVSEC), 
+                        the only course you need to learn to rules and become a Safety & Security Officer. 
+                        With 150,000+ ratings and a 4.8 average, my AVSEC course is one of the HIGHEST 
+                        RATED courses in the history of CAAS!
+                        <br>
+                        We'll take you step-by-step through engaging video tutorials and teach you 
+                        everything you need to know to succeed as a Safety & Security Officer.
+                        <br>
+                        Throughout this comprehensive course, we cover a massive amount of safety and 
+                        security, including:
+                        <br>
+                        &bull; Various Safety and security Groups and Components
+                        <br>
+                        &bull; Access Controls
+                        <br>
+                        &bull; Human Measures - Screening, 
+                        Profiling and 
+                        Threatening & Non Threatening Categories
+                        <br>
+                        &bull; Various protection layers
+                        <br>
+                        &bull; Security measures
+                        <br>
+                        &bull; Procedures at the land side
+                        <br>
+                        &bull; Airside/ Sterile areas
+                        <br>
+                        &bull; Patrolling/ Challenges and Threats
+                        <br>
+                        &bull; Dangerous Goods screening Baggage/ Passenger Screening
+                        <br>
+                        &bull; Advanced Imaging Technology
+                        <br>
+                        &bull; Larger X RAY Scanners - X RAY technologies to screen Cabin and 
+                        Cargo Luggage  
+                        Various other tools & 
+                        Equipnment used for screening.
+                        <br>
+                    </p>
+                </div>
+                <div class="tldr">
+                    <h2>What you'll learn</h2>
+                    <ul>
+                        <li><img src="/assets/tick.svg" alt="tick">Air Transport Safety and Security</li>
+                        <li><img src="/assets/tick.svg" alt="tick">Management - AVSEC - Intermediate (Regular)</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="target">
+                <p id="label">Who this course is for</p>
+                <p class="text">Freshers or Experienced to enhance their industry knowledge and to 
+                    become employable.</p>
+            </div>
+            <hr>
+            <div class="instructor">
+                <p id="label">Instructor</p>
+                <div class="instructor-content">
+                    <div class="contact-card">
+                        <img id="instructor-pfp" src="/assets/mjo.png" alt="">
+                        <div class="contact-info">
+                            <p>Mrs. Joseph<p>
+                            <p>Senior Avaiatioon Safety & Security Officer</p>
+                        </div>
+                    </div>
+                    <p class="idesc">An Aviation enthusiast and a veteran who aims to play an important role in 
+                        the vocational training by providing a wide range of opportunities to both our 
+                        trainees and the partners to sustain and broader Aviation and Hospitality 
+                        community. The industry relies on the skills and leadership of its people. 
+                        <br>
+                        Her aim is to fill the gap that exists between the current knowledge, skills, 
+                        attitude etc and the competences required by the industry through imparting 
+                        quality and affordable training at Essence Learning</p>
+                </div>
+            </div>
+        </div>
+        <div class="bottom" (click)="collapse()">
+            <h1 *ngIf="collapsed">Show More <img src="/assets/collapse.svg" alt="collapse"></h1>
+            <h1 *ngIf="!collapsed">Show Less <img style="transform: scaleY(-1);" src="/assets/collapse.svg" alt="collapse"></h1>
+        </div>
+        <div class="footer">
+            <p style="font-weight: 700;"> &copy; 2023 CAAS Training Institute. All Rights Reserved</p>
+            <p>Terms of Service Private Policy</p>
+        </div>
+    </div>
+</div>
+
