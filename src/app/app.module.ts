@@ -4,13 +4,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CoursesLearningComponent } from './courses-learning/courses-learning.component';
-import { HeaderComponent } from './header/header.component';
-import { CompletedTopicComponent } from './courses-learning/completed-topic/completed-topic.component';
-import { IncompleteTopicComponent } from './courses-learning/incomplete-topic/incomplete-topic.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
-import { TabComponent } from './sidebar/tab/tab.component';
-import { SubTabComponent } from './sidebar/tab/sub-tab/sub-tab.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { SubTabComponent } from './components/sidebar/tab/sub-tab/sub-tab.component';
+import { TabComponent } from './components/sidebar/tab/tab.component';
+import { HeaderComponent } from './common/header/header.component';
+import { CompletedTopicComponent } from './pages/courses-learning/completed-topic/completed-topic.component';
+import { CoursesLearningComponent } from './pages/courses-learning/courses-learning.component';
+import { IncompleteTopicComponent } from './pages/courses-learning/incomplete-topic/incomplete-topic.component';
 
 @NgModule({
   declarations: [
@@ -21,8 +21,7 @@ import { SubTabComponent } from './sidebar/tab/sub-tab/sub-tab.component';
     IncompleteTopicComponent,
     SidebarComponent,
     TabComponent,
-    SubTabComponent
-  ],
+    SubTabComponent  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
