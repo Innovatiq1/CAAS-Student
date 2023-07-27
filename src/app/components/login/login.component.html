@@ -1,0 +1,170 @@
+
+<div class="login-area overflow-hidden">
+  
+    <div class="d-none d-sm-none d-md-block d-lg-block d-xl-block ">
+        <div class="d-flex for-vh w-100 ">
+          <div class="left-side w-50 py-5">
+              <div class="content">
+                  <div class="container text-center py-4">
+                      <div class="logo">
+                        <img src="/assets/login/Logo.svg" alt="logo">
+                      </div>
+                      <div class="login-img">
+                        <img src="/assets/login/login.svg" alt="logo">
+                      </div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="have-account text-center">
+                      <p>Don’t have an account ! <a href="#"> Sign Up</a> </p>
+                  </div>
+              </div>
+          </div>
+          <div class="right-side w-50 py-5">
+              <div class="content p-5 d-flex align-items-center justify-content-center inner-content">
+                 <form [formGroup]="loginForm" class="d-flex flex-column align-items-center justify-content-center w-100 p-5">
+                    <div class="form-group w-100 mb-4">
+                      <input type="text"
+                        class="form-control w-100"  formControlName="email"  aria-describedby="helpId" placeholder="Email ID"
+                        [class.invalid-input]="isSubmitted && loginForm.get('email')?.invalid || loginForm.get('email')?.invalid && loginForm.get('email')?.touched"
+                        >
+                        <div *ngIf="isSubmitted" class="mt-2" [class.invalid-text]="isSubmitted && loginForm.get('email')?.invalid || loginForm.get('email')?.invalid && loginForm.get('email')?.touched">
+                            {{ utils.getErrorMessage(loginForm, 'email')?.message }}
+                        </div>           
+    
+                        <!-- <div class="invalid-feedback" *ngIf="email" >
+                          {{ email }}
+                        </div> -->
+                      </div>
+    
+                    <div class="form-group w-100 mb-2">
+                      <input [type]="showPassword ? 'text' : 'password'"
+                        class="form-control w-100" formControlName ="password"  aria-describedby="helpId" placeholder="Password"
+                        [class.invalid-input]="isSubmitted && loginForm.get('password')?.invalid || loginForm.get('password')?.invalid && loginForm.get('password')?.touched"
+                        >
+                        <div *ngIf="isSubmitted"  class="mt-2" [class.invalid-text]="isSubmitted && loginForm.get('password')?.invalid || loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+                            {{ utils.getErrorMessage(loginForm, 'password')?.message }}
+                        </div>
+    
+                        <!-- <button (click)="onClick()">
+                          <i class="fa fa-eye" aria-hidden="true" *ngIf="!show"></i>
+                          <i class="fa fa-eye-slash" aria-hidden="true" *ngIf="show"></i>
+                        </button> -->
+                        <!-- <i class="far fa-eye" id="togglePassword" style="margin-left: -30px; cursor: pointer;"></i> -->
+                        
+                        <!-- <div class="invalid-feedback" >
+                          {{ email }}
+                        </div> -->
+                      </div>
+
+                    <div class="row w-100 mb-4">
+                      <div class="col-6">
+                          <div class="form-check ps-0 show-pass">
+                              <input type="checkbox"  (click)="onClick()" >
+                                <span>Show Password</span>
+                          </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="form-group w-100 text-end">
+                            <a href="" class="text-danger text-decoration-none fgt">Forgot Password ?</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group  w-100 mb-4">
+                        <div class="d-flex align-items-center w-100 justify-content-center">
+                          <span class="divider-line"></span>
+                          <span class="px-3 divider-text">OR</span>
+                          <span class="divider-line"></span>
+                        </div>
+    
+                    </div>
+                    <div class="form-group w-100 mb-4">
+                      <button type="button" class="btn btn-singPass d-flex align-items-center justify-content-center">
+                        <img src="/assets/login/singPass.svg" alt="singPass">
+                        <span class="px-2">Login with singPass</span>
+                        
+                        
+                      </button>
+                    </div>
+                   
+                    <div class="form-group mb-4 w-100 text-center d-flex justify-content-center">
+                      <button type="button"(click)="login()" class="btn btn-login d-flex align-items-center">Log In <img class="ms-4 " src="assets/login/arrow28.svg"></button>
+                  </div>
+                 </form>
+              </div>
+          </div>
+        </div>
+    </div>
+  
+  
+    
+                <!-- row -->
+                <div class="d-block d-sm-block d-md-none d-lg-none">
+                    <div class="row text-center">
+                        <div class="col">
+                            <div class="logo">
+                                <img src="/assets/login/Logo.svg" alt="logo">
+                              </div>
+                              <div class="login-img-md">
+                                <img src="/assets/login/login.svg" alt="logo">
+                              </div>
+                        </div>
+                        <!-- <div class="col"> -->
+                            <form class="d-flex flex-column align-items-center justify-content-center w-100 p-5">
+                                <div class="form-group w-100 mb-4">
+                                  <!-- <input type="text"
+                                    class="form-control w-100" name="" id="" aria-describedby="helpId" placeholder="Email ID"> -->
+                                </div>
+                
+                                <div class="form-group w-100 mb-2">
+                                  <input type="Password"
+                                    class="form-control w-100" name="" id="" aria-describedby="helpId" placeholder="Password">
+                                </div>
+                                <div class="row w-100 mb-4">
+                                  <div class="col-6 ">
+                                      <div class="form-check w-100 ps-0 show-pass">
+                                        <label>
+                                          <input type="checkbox">
+                                            Show Password
+                                        </label>
+                                      </div>
+                                  </div>
+                                  <div class="col-6">
+                                    <div class="form-group w-100 text-end">
+                                        <a href="" class="text-danger text-decoration-none fgt">Forgot Password ?</a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="row d-block d-sm-block d-md-none d-lg-none">
+                                  <div class="col-12">
+                                    <div class="form-group  w-100 mb-4">
+                                      <div class="d-flex align-items-center w-100 justify-content-center">
+                                        <span class="divider-line"></span>
+                                        <span class="px-3 divider-text">OR</span>
+                                        <span class="divider-line"></span>
+                                      </div>
+                                  </div>
+                                </div>
+                                  <div class="col-12">
+                                    <div class="form-group w-100 mb-4">
+                                      <button type="button" class="btn btn-singPass-md d-flex align-items-center justify-content-center">
+                                        <img src="/assets/login/singPass.svg" alt="singPass">
+                                        <span class="px-2">Login with Singpass</span>
+                                      </button>
+                                    </div>
+                                  </div>
+                                  <div class="col-12">
+                                    <div class="form-group mb-4 w-100 text-center d-flex justify-content-center">
+                                      <button type="button" class="btn btn-login d-flex align-items-center">Log In <i class="fa-solid fa-arrow-right mx-2"></i></button>
+                                  </div>
+                                  </div>
+                                </div>
+                                
+                                
+                             </form>
+                        <!-- </div> -->
+                    </div>
+                </div>
+                <!-- End rows -->
+  </div> 
+  
+  

@@ -60,7 +60,7 @@
 
 .progress .content .words .title {
     width: 350px;
-    overflow: hidden;
+    /* overflow: hidden; */
     margin-top: 10px;
 }
 

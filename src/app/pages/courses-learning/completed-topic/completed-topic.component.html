@@ -10,4 +10,22 @@
         <p class="time">{{section.lectures}} Lectures &centerdot; {{section.time}} Min</p>
         <img id="more" src="/assets/right-arrow.svg" alt="more">
     </div>
+<!-- ... existing code ... -->
+<div class="container">
+    <!-- ... existing code ... -->
+    <div *ngFor="let courseKit of courseKits">
+        <div class="description video-pointer">
+            <ng-container *ngFor="let video of courseKit.videoLink; let i = index">
+                <div (click)="playVideo(video)">
+                    <video controls>
+                        <source [src]="video.url" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <br>
+            </ng-container>
+        </div>
+    </div>
+</div>
+<!-- ... existing code ... -->
 </div>

@@ -1,4 +1,6 @@
 import { Component, Output } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
+import { CommonService } from 'src/app/core/services/common.service';
 
 @Component({
   selector: 'app-courses-learning',
@@ -6,8 +8,7 @@ import { Component, Output } from '@angular/core';
   styleUrls: ['./courses-learning.component.css']
 })
 export class CoursesLearningComponent {
-  sections = [{title: "Introduction",  number: 1, lectures: 2, time: 15},
-  {title: "Air Transport Safety & Security", number: 2, lectures: 1, time: 20}
+  sections = [{title: "Introduction",  number: 1, lectures: 2, time: 15}
   ]
   incompletesections = [{title:"Air Transport Safety & Security Part 2", number: 3, lectures: 1, time: 45, 
 items:[{type: "video", title:"Air Transport Safety & Security Part 2", time: 45}]},
@@ -23,9 +24,35 @@ title: "Ramp Rules and Regulations", time: 10}]},
 {title: "Next Steps", number: 11, lectures: 0, time: 40, items: [{type:"reading", title: "Practice Test 1", time: 10}, {type: "reading", title:"Practice Test 2", time: 30}] }]
 
 collapsed = false;
+  courseKits: any;
+  subscribeParams: Params;
+  courseId!: string;
+  courseDetails: any;
+
 
 collapse() {
   this.collapsed = !this.collapsed;
 }
+constructor(    
+  private commonService: CommonService,
+  private activatedRoute: ActivatedRoute
+  ){
+    this.subscribeParams = this.activatedRoute.params.subscribe((params) => {
+      this.courseId = params["id"];
+    });
+this.getCourseKits();
+
+  }
+getCourseKits(): void {
+  this.commonService.getCourseById(this.courseId).subscribe((res:any) => {
+    this.courseKits = res?.course_kit;
+    this.courseDetails = res;
+  },
+    (error:any) => {
+      console.error('Error fetching course kits:', error);
+    }
+  );
+}
+
 
 }

@@ -1,0 +1,57 @@
+
+<ng-container>
+    <h4 class="slider-title">My Pending Courses</h4>
+    <!-- <owl-carousel-o [options]="customOptions" class="mg-b40"
+        *ngIf="pendingProjects.length == 0">
+        <ng-template carouselSlide class="webinar-content-box1">
+            <p class="post-title1 webinar-title1"> No pending courses found!</p>
+        </ng-template>
+    </owl-carousel-o> -->
+    <!-- <owl-carousel-o [options]="customOptions" class="mg-b40"> -->
+        <div  *ngFor="let project of pendingProjects">
+            <div class="webinar-box1 article-box1">
+                <div class="webinar-image-box1">
+
+                    <!-- <img *ngIf="project?.classId?.courseId?.image_link" [src]="project?.classId?.courseId?.image_link" alt="image" class="clg-project-img"
+                        (click)="openModalWithClass(project?.classId?.courseId,false)"> -->
+                    <img *ngIf="project?.classId?.courseId?.image_link" src="/src/assets/images/resources/article-image1.png" alt="" class="clg-project-img"
+                        (click)="openModalWithClass(project?.classId?.courseId,false)">
+
+                    <!-- <div class="webinar-imageas"
+                        [ngStyle]="{'background-image': project?.image ? 'url(' + project?.image + ')' : 'url(/assets/images/resources/article-image1.png)' }"
+                        (click)="openModalWithClass(addDialog,project,false)"></div> -->
+
+                    <span *ngIf="project?.classId?.courseId?.fee == 0" class="clg-freetag">Free</span>
+                    <!-- <img class="zoom-image" src="/assets/images/resources/programs-banner_1.jpg"
+                        alt="Article Image"> -->
+                    <!-- <a class="watchlist"
+                        (click)="project?.watchlist ? onAddOrRemoveWatchlist('Remove',project._id) : onAddOrRemoveWatchlist('Add',project._id) ">Add
+                        to Watchlist <i class="fa fa-heart" title="Add to your project watchlist"
+                            [class.active]="project?.watchlist" aria-hidden="true"></i></a> -->
+                </div>
+                <div class="webinar-content-box1" (click)="openModalWithClass(project?.classId?.courseId,false)">
+                    <a class="post-title1 webinar-title1" href="javascript:void(0)">{{project?.classId?.courseId?.title}}</a>
+                    <!-- <p class="tags-box1">
+                        <span class="article-tags1" *ngFor="let tag of project.keyword">{{tag}}</span>
+                        <span class="article-tags1">UI/UX </span>
+                    </p> -->
+                    <p class="post-description1 webinar-desc1 top-gap1"><span
+                            class="description">{{project?.classId?.courseId?.course_description}}</span></p>
+                    <!-- <div style="display: flex;align-items: center;">
+                        <img src="/assets/images/office-chair.png" style="width: 12px;" alt="">
+                        <p *ngIf="project?.remainingSlot - project?.projectMembers?.length != 0" style="margin-bottom: 0;margin-left: 7px;font: normal normal normal 12px/16px Nunito;
+            letter-spacing: 0px; color: #141414;">{{project?.remainingSlot - project?.projectMembers?.length}}
+                            spots
+                            available</p>
+
+                        <p *ngIf="project?.remainingSlot - project?.projectMembers?.length == 0" style="margin-bottom: 0;margin-left: 7px;font: normal normal normal 12px/16px Nunito;
+                            letter-spacing: 0px; color: #141414;">
+                            Project is full</p>
+                    </div>
+                    <p class="posted-date1 top-gap1"><span>Last date of joining : {{project?.end_date |
+                            date}}</span></p> -->
+                </div>
+            </div>
+        </div>
+    <!-- </owl-carousel-o> -->
+</ng-container>

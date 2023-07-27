@@ -1,3 +1,5 @@
+<app-header></app-header>
+<app-sidebar></app-sidebar>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
@@ -7,21 +9,20 @@
             <img id="close" src="/assets/Close.png" alt="close">
             <div class="words">
                 <h2>Master Class: </h2>
-                <h2 style="color: rgba(214, 78, 73, 1);">Aviation Security and Safety Management</h2>
-                <p>2/15 COMPLETED</p>
+                <h2 style="color: rgba(214, 78, 73, 1);">{{courseDetails?.title}}</h2><br>
+                <!-- <p>2/15 COMPLETED</p>
                 <div class="cup-border">
                     <img src="/assets/cup.png" alt="cup">
-                </div>
-                <div class="lines">
+                </div> -->
+                <!-- <div class="lines">
                     <div class="progress-bar"></div>
                     <div class="progress-bar"></div>
                     <div style="opacity: 50%;" class="progress-bar"></div>
                     <div style="opacity: 50%;" class="progress-bar"></div>
                     <div style="opacity: 50%;" class="progress-bar"></div>
-                </div>
-                <div class="title">
+                </div> -->
+                <div class="title mb-5">
                     <h2>Course Content</h2>
-                    <p>Expand All Sections</p>
                 </div>
                 <div class="topics">
                     <app-completed-topic 
@@ -37,14 +38,14 @@
         </div>
     </div>
     <div class="bookmark">
-        <p style="color: #7E7E7E;">Courses</p><p>/</p><p style="color: #7E7E7E;">In Progress</p><p>/</p><p>Master Class:</p><p style="color: rgba(214, 78, 73, 1);"> Aviation Security and Safety Management</p>
+        <p style="color: #7E7E7E;">Courses</p><p>/</p><p style="color: #7E7E7E;">In Progress</p><p>/</p><p>Master Class:</p><p style="color: rgba(214, 78, 73, 1);"> {{courseDetails?.title}}</p>
     </div>
     <div class="top">
-        <h1>Aviation Security and Safety Management</h1>
-        <p>Safety and Security: Air Transport Safety</p>
+        <h1>{{courseDetails?.title}}</h1>
+        <p>{{courseDetails?.course_description}}</p>
     </div>
     <div class="top-right">
-        <p>SECTION 3/12</p>
+        <!-- <p>SECTION 3/12</p> -->
         <img src="/assets/lr-button.png" alt="button">
     </div>
     <div class="video">
